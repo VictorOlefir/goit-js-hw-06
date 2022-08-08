@@ -4,6 +4,6 @@ const spanEl = document.querySelector("#text");
 inputEl.addEventListener("input", onInputChange);
 
 function onInputChange(event) {
-  console.log(event.currentTarget.value);
-  spanEl.style.fontSize = `${event.currentTarget.value}px`;
+  console.log(event.target.value);
+  spanEl.style.fontSize = `${event.target.value}px`;
 }

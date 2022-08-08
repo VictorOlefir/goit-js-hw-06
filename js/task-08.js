@@ -8,8 +8,7 @@ function onFormSubmit(event) {
   const formElements = event.currentTarget.elements;
   const email = formElements.email.value;
   const password = formElements.password.value;
-
-  if (formElements.email.value === "" || formElements.password.value === "") {
+  if (!email || !password) {
     return console.log("Please fill in all the fields!");
   }
 
@@ -20,5 +19,5 @@ function onFormSubmit(event) {
 
   console.log(formData);
 
-  event.currentTarget.reset();
+  event.target.reset();
 }

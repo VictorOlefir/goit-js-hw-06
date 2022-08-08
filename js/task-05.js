@@ -1,15 +1,9 @@
-const inputEl = document.querySelector("#name-input");
-const spanEl = document.querySelector("#name-output");
+const textInput = document.querySelector("#name-input");
+const textOutput = document.querySelector("#name-output");
 
-console.log(inputEl);
-console.log(spanEl);
-
-inputEl.addEventListener("input", onInputChange);
-
-function onInputChange(event) {
-  const valueInput = event.currentTarget.value;
-  if (valueInput.length === 0) {
-    return (spanEl.textContent = "Anonymous");
+textInput.addEventListener("input", (event) => {
+  textOutput.textContent = event.currentTarget.value;
+  if (event.currentTarget.value === "") {
+    textOutput.textContent = "Anonymous";
   }
-  spanEl.textContent = event.currentTarget.value;
-}
+});
